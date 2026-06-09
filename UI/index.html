@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="app-wrapper">
+  <div class="container">
+
+    <!-- ── Search bar ──────────────────────────── -->
+    <div class="search-bar">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name…"
+        value="enter city"
+        onkeydown="handleKey(event)"
+      />
+      <div class="days-input-wrap">
+        <input
+          id="daysInput"
+          type="number"
+          min="1"
+          max="30"
+          placeholder="Days"
+          onkeydown="handleKey(event)"
+        />
+        <span class="days-label">days</span>
+      </div>
+      <button class="btn-search" onclick="doSearch()">
+        Search
+      </button>
+    </div>
+
+    <!-- ── Status bar (demo mode notice) ──────── -->
+    <div id="statusBar" style="
+      font-size:12px; color:rgba(255,255,255,0.45);
+      text-align:center; margin-bottom:14px; min-height:16px;
+    "></div>
+
+    <!-- ── Hero current weather card ──────────── -->
+    <div class="glass hero-card" id="heroCard">
+      <div class="state-message">
+        <div class="state-icon">🌤</div>
+        <h2>Loading weather…</h2>
+        <div class="loading-dots"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <!-- ── N-day forecast card ─────────────────── -->
+    <p class="section-title" id="forecastTitle" style="margin-top:8px">7-Day Forecast</p>
+    <div class="glass forecast-card">
+      <div id="forecastRows"></div>
+    </div>
+
+    <!-- ── Avg temperature chart ──────────────── -->
+    <p class="section-title">Average Temperature Trend</p>
+    <div class="glass chart-card">
+      <svg id="tempChart" class="chart-container" viewBox="0 0 600 130" preserveAspectRatio="none"
+           style="width:100%;height:140px;overflow:visible;display:block;">
+      </svg>
+    </div>
+
+    <!-- ── Footer ─────────────────────────────── -->
+    <div class="footer">
+      Weather Forecast App &nbsp;·&nbsp; Data from your local API
+    </div>
+zz
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

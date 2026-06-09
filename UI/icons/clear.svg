@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="40%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="48" fill="#FFD600" opacity="0.10"/>
+  <circle cx="60" cy="60" r="38" fill="#FFD600" opacity="0.12"/>
+  <g stroke="#FFAB00" stroke-width="4" stroke-linecap="round" opacity="0.95">
+    <line x1="60" y1="7"  x2="60" y2="22"/>
+    <line x1="60" y1="98" x2="60" y2="113"/>
+    <line x1="7"  y1="60" x2="22" y2="60"/>
+    <line x1="98" y1="60" x2="113" y2="60"/>
+    <line x1="21.6" y1="21.6" x2="32.2" y2="32.2"/>
+    <line x1="87.8" y1="87.8" x2="98.4" y2="98.4"/>
+    <line x1="98.4" y1="21.6" x2="87.8" y2="32.2"/>
+    <line x1="32.2" y1="87.8" x2="21.6" y2="98.4"/>
+  </g>
+  <circle cx="60" cy="60" r="28" fill="url(#sunGrad)" filter="url(#softGlow)"/>
+  <ellipse cx="51" cy="50" rx="9" ry="6" fill="white" opacity="0.28"/>
+</svg>

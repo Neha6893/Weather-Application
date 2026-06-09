@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="stormCloudG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#546E7A"/>
+      <stop offset="100%" stop-color="#1C313A"/>
+    </linearGradient>
+    <linearGradient id="boltG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <filter id="boltGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Cloud -->
+  <ellipse cx="60" cy="48" rx="36" ry="21" fill="url(#stormCloudG)"/>
+  <circle cx="36" cy="48" r="18" fill="url(#stormCloudG)"/>
+  <circle cx="60" cy="36" r="22" fill="url(#stormCloudG)"/>
+  <circle cx="82" cy="47" r="16" fill="url(#stormCloudG)"/>
+  <!-- Lightning bolt -->
+  <polygon points="66,62 52,82 62,82 54,104 76,76 64,76" fill="url(#boltG)" filter="url(#boltGlow)"/>
+  <polygon points="66,62 52,82 62,82 54,104 76,76 64,76" fill="white" opacity="0.2"/>
+</svg>
